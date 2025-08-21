@@ -1,0 +1,61 @@
+name: PSR-12 Lint
+
+on:
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  audit:
+    name: PSR-12 Lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: ⬇ Checkout code
+        uses: actions/checkout@v4
+
+      - name: ⚙️ Set up PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: latest # or any other PHP version you are using
+          extensions: mbstring, ctype, iconv, xml, dom
+          tools: composer, cs2pr
+          coverage: none
+
+      - name: ♻️ Cache Composer
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.composer/cache/files
+            vendor
+          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.json') }}
+          restore-keys: |
+            ${{ runner.os }}-composer-
+
+      - name: 💾 Install dependencies
+        run: composer install --prefer-dist --no-progress --no-interaction
+
+      - name: 🔍 Run PHP_CodeSniffer (PSR-12) with PR annotations
+        run: |
+          ./vendor/bin/phpcs --standard=PSR12 --report=checkstyle ./src/ | cs2pr
+
+
+jobs:
+  phpcs:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+          tools: composer
+
+      - name: Install dependencies (dev)
+        run: composer install --no-interaction --no-progress --prefer-dist
+
+      - name: Run PHPCS (PSR-12)
+        run: |
+          ./vendor/bin/phpcs --version
+          ./vendor/bin/phpcs --standard=PSR12 src
