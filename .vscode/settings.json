@@ -1,0 +1,10 @@
+{
+    "editor.formatOnSave": true,
+    "files.trimTrailingWhitespace": true,
+    "files.insertFinalNewline": true,
+    "php.validate.enable": true,
+    "php.validate.executablePath": "/usr/local/bin/php",
+    "phpcs.enable": true,
+    "phpcs.standard": "PSR12",
+    "phpcs.executablePath": "./vendor/bin/phpcs"
+}
