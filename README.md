@@ -59,12 +59,12 @@ Este repositorio es tu punto de partida ideal para proyectos basados en PHP. Est
 
   Este repositorio incluye un directorio `.vscode/` con:
 
-    - **settings.json**: Configuración para formato automático, validación PHP y aplicación de PSR-12 al guardar.
-    - **extensions.json**: Lista de extensiones recomendadas:
-      - [PHP Intelephense](https://marketplace.visualstudio.com/items?itemName=bmewburn.vscode-intelephense-client)
-      - [phpcs](https://marketplace.visualstudio.com/items?itemName=ikappas.phpcs)
-      - [EditorConfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
-      - [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+  - **settings.json**: Configuración para formato automático, validación PHP y aplicación de PSR-12 al guardar.
+  - **extensions.json**: Lista de extensiones recomendadas:
+    - [PHP Intelephense](https://marketplace.visualstudio.com/items?itemName=bmewburn.vscode-intelephense-client)
+    - [phpcs](https://marketplace.visualstudio.com/items?itemName=ikappas.phpcs)
+    - [EditorConfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
+    - [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
   👉 De esta forma, cualquiera que clone el repositorio tendrá el mismo entorno base en VS Code.
 
 ## 📢 Reglas de Git
