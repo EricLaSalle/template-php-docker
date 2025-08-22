@@ -4,10 +4,10 @@ on:
   push:
     branches: ["*"]
   pull_request:
-    branches: [ "main" ]
+    branches: ["main"]
 
 jobs:
-  PSR-12-Lint:
+  phpcs:
     name: PSR-12 Lint
     runs-on: ubuntu-latest
     steps:
@@ -17,7 +17,7 @@ jobs:
       - name: ⚙️ Set up PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version: latest # or any other PHP version you are using
+          php-version: latest
           extensions: mbstring, ctype, iconv, xml, dom
           tools: composer, cs2pr
           coverage: none
@@ -27,7 +27,6 @@ jobs:
         with:
           path: |
             ~/.composer/cache/files
-            vendor
           key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.json') }}
           restore-keys: |
             ${{ runner.os }}-composer-
@@ -35,29 +34,11 @@ jobs:
       - name: 💾 Install dependencies
         run: composer install --prefer-dist --no-progress --no-interaction
 
-      - name: 🔍 Run PHP_CodeSniffer (PSR-12) with PR annotations
-        run: |
-          ./vendor/bin/phpcs --standard=PSR12 --report=checkstyle ./src/ | cs2pr
+      # Always run PHPCS to fail on violations
+      - name: 🔍 Run PHPCS (PSR-12)
+        run: ./vendor/bin/phpcs --standard=PSR12 src
 
-
-jobs:
-  phpcs:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup PHP
-        uses: shivammathur/setup-php@v2
-        with:
-          php-version: '8.2'
-          tools: composer
-
-      - name: Install dependencies (dev)
-        run: composer install --no-interaction --no-progress --prefer-dist
-
-      - name: Run PHPCS (PSR-12)
-        run: |
-          ./vendor/bin/phpcs --version
-          ./vendor/bin/phpcs --standard=PSR12 src
+      # Optional: add annotations when running on a PR
+      - name: 📝 Annotate PR with PHPCS (cs2pr)
+        if: failure() && github.event_name == 'pull_request'
+        run: ./vendor/bin/phpcs --standard=PSR12 --report=checkstyle src | cs2pr
