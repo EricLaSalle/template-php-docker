@@ -7,7 +7,12 @@ Este repositorio es tu punto de partida ideal para proyectos basados en PHP. Est
 - **Docker 🐳**: Proporciona un entorno de desarrollo uniforme y sin complicaciones. Equipado con Apache, MariaDB y phpMyAdmin para una experiencia de desarrollo completa.
 - **Composer 🎼**: Administrador de dependencias para PHP, facilitando la gestión de librerías y paquetes.
 - **phpcs con el estándar PSR12 📏**: Asegura que tu código PHP cumpla con las mejores prácticas definidas en el estándar PSR12.
-- **GitHub Actions 🤖**: Automatiza tus flujos de trabajo (linting y pruebas) solo cuando se abre o actualiza un Pull Request hacia main.
+- **Prettier ✨**: Para formatear archivos PHP (con `@prettier/plugin-php`), JSON, YAML y otros, asegurando un estilo de código consistente.
+- **EditorConfig 📝**: Unifica la configuración de estilo (indentación, finales de línea, etc.) entre diferentes editores.
+- **GitHub Actions 🤖**: Automatiza los flujos de trabajo:
+  - **PSR-12 Lint**: Valida el código PHP en cada push y pull request.
+  - **Protect Main Branch**: Bloquea pushes directos no autorizados a `main`.
+  - **Require Owner Approval**: Requiere revisión del propietario para cambios críticos.
 - **VS Code ⚡**: Incluye configuración recomendada (settings.json) y extensiones recomendadas (extensions.json) para un entorno de desarrollo consistente entre colaboradores.
 
 ## 🚀 Configuración inicial
@@ -52,19 +57,24 @@ Este repositorio es tu punto de partida ideal para proyectos basados en PHP. Est
 
 6. **Visual Studio Code ⚡**:
 
-    Este repositorio incluye un directorio .vscode/ con:
-    - settings.json: configuración para aplicar formato automático, validar PHP y usar el estándar PSR-12 en cada guardado.
-    - extensions.json: lista de extensiones recomendadas, como:
-        - [PHP Intelephense](https://marketplace.visualstudio.com/items?itemName=bmewburn.vscode-intelephense-client): autocompletado y análisis avanzado.
-        - [phpcs](https://marketplace.visualstudio.com/items?itemName=ikappas.phpcs): integración de **PHP_CodeSniffer** con VS Code.
+Este repositorio incluye un directorio `.vscode/` con:
+
+- **settings.json**: Configuración para formato automático, validación PHP y aplicación de PSR-12 al guardar.
+- **extensions.json**: Lista de extensiones recomendadas:
+  - [PHP Intelephense](https://marketplace.visualstudio.com/items?itemName=bmewburn.vscode-intelephense-client)
+  - [phpcs](https://marketplace.visualstudio.com/items?itemName=ikappas.phpcs)
+  - [EditorConfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
+  - [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
     👉 De esta forma, cualquiera que clone el repositorio tendrá el mismo entorno base en VS Code.
 
 ## 📢 Reglas de Git
 
-Para mantener un flujo de trabajo limpio:
+- **Nunca hagas push directamente a `main`**.
+  Esta rama está protegida mediante la acción [`protect-main.yml`](.github/workflows/protect-main.yml).
 
-1. **Nunca hagas push directamente a la rama `main`**. Esta rama debería tener restricciones de push ya que cualquier cambio directo puede causar conflictos y complicaciones.
+- **Crea siempre una rama aparte** para tus cambios y características.
 
-2. **Crea siempre una rama aparte** para tus cambios y características. Asegúrate de que sus nombres sean descriptivos y sigan las convenciones establecidas.
-
-3. **Realiza Pull Requests (PRs) para integrar tus cambios**. Una vez que tu rama esté lista y hayas realizado tus commits, crea una Pull Request en GitHub. Esto desencadenará las GitHub Actions (PSR-12) para validar tu código antes de la integración.
+- **Abre un Pull Request (PR)** para integrar tus cambios.
+  Los PRs:
+  - Dispararán el linting PSR-12.
+  - Requerirán revisión del propietario para cambios críticos (vía [`require-owner-approval.yml`](.github/workflows/require-owner-approval.yml)).
