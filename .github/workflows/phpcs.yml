@@ -1,11 +1,13 @@
 name: PSR-12 Lint
 
 on:
+  push:
+    branches: ["*"]
   pull_request:
     branches: [ "main" ]
 
 jobs:
-  audit:
+  PSR-12-Lint:
     name: PSR-12 Lint
     runs-on: ubuntu-latest
     steps:
