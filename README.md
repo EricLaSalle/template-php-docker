@@ -65,6 +65,7 @@ Este repositorio es tu punto de partida ideal para proyectos basados en PHP. Est
     - [phpcs](https://marketplace.visualstudio.com/items?itemName=ikappas.phpcs)
     - [EditorConfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
     - [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
+  
   👉 De esta forma, cualquiera que clone el repositorio tendrá el mismo entorno base en VS Code.
 
 ## 📢 Reglas de Git
