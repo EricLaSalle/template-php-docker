@@ -2,11 +2,11 @@
 
 # Entire .github (workflows, issue templates, etc.)
 
-/.github/\*\* @oriolcortes
+/.github/** @oriolcortes
 
 # Entire .vscode (editor settings, tasks, extensions)
 
-/.vscode/\*\* @oriolcortes
+/.vscode/** @oriolcortes
 
 # ---------------------------
 
