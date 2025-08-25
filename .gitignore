@@ -11,4 +11,4 @@ composer.phar
 # Ignore environment files
 .env
 .env.*
-!.env.sample
+!.env.example
