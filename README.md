@@ -55,17 +55,21 @@ Este repositorio es tu punto de partida ideal para proyectos basados en PHP. Est
 
   Asegúrate de que tu código PHP cumpla con el estándar PSR12. Las GitHub Actions se encargarán de validar automáticamente tu código usando este estándar en cada push o pull request. Es importante siempre adherirse a estas mejores prácticas para mantener la calidad del código.
 
-6. **Visual Studio Code ⚡**:
+6. **EditorConfig 📝**
+
+  El plugin EditorConfig para VSCode asegura que todos los desarrolladores del proyecto sigan un estilo de codificación consistente. La configuración se define en el archivo `.editorconfig` en la raíz del proyecto.
+
+7. **Prettier 🎨**
+
+  Prettier es una herramienta de formateo de código que garantiza un estilo de código consistente en todo el proyecto. El plugin Prettier para VSCode ayuda a aplicar estas reglas automáticamente.
+
+8. **Visual Studio Code 💻**:
 
   Este repositorio incluye un directorio `.vscode/` con:
 
   - **settings.json**: Configuración para formato automático, validación PHP y aplicación de PSR-12 al guardar.
-  - **extensions.json**: Lista de extensiones recomendadas:
-    - [PHP Intelephense](https://marketplace.visualstudio.com/items?itemName=bmewburn.vscode-intelephense-client)
-    - [phpcs](https://marketplace.visualstudio.com/items?itemName=ikappas.phpcs)
-    - [EditorConfig](https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig)
-    - [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode)
-  
+  - **extensions.json**: Lista de extensiones recomendadas.
+
   👉 De esta forma, cualquiera que clone el repositorio tendrá el mismo entorno base en VS Code.
 
 ## 📢 Reglas de Git
