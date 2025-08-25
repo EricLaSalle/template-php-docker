@@ -9,5 +9,13 @@
   "arrowParens": "always",
   "endOfLine": "lf",
   "plugins": ["@prettier/plugin-php"],
-  "phpVersion": "8.3"
+  "phpVersion": "8.3",
+  "overrides": [
+    {
+      "files": ["*.json", "*.jsonc"],
+      "options": {
+        "printWidth": 200
+      }
+    }
+  ]
 }
