@@ -1,7 +1,7 @@
 {
     "name": "oriolcortes/boilerplate-php",
     "description": "Repositorio de arranque para proyectos basados en PHP, configurado con herramientas modernas para un desarrollo más ágil y profesional.",
-    "license": "BSD-3-Clause",
+    "license": "MIT",
     "autoload": {
         "psr-4": {
             "OriolCortes\\BoilerplatePhp\\": "src/"
