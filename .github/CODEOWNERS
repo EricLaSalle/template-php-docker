@@ -15,7 +15,9 @@
 # ---------------------------
 
 /.editorconfig @oriolcortes
-/.env.sample @oriolcortes
+/.env.example @oriolcortes
+/.gitattributes @oriolcortes
+/.gitignore @oriolcortes
 /.prettierrc @oriolcortes
 /docker-compose.yml @oriolcortes
 /Dockerfile @oriolcortes
