@@ -1,0 +1,41 @@
+<?php
+
+namespace Classes;
+
+class Vehicle
+{
+    private $matricula;
+    private $potencia;
+    private $velocitatMitjana;
+
+    public function calcularTemps($distancia)
+    {
+        return $distancia / $this->velocitatMitjana;
+    }
+
+    // Getters i Setters
+    public function getMatricula()
+    {
+        return $this->matricula;
+    }
+    public function setMatricula($matricula)
+    {
+        $this->matricula = $matricula;
+    }
+    public function getPotencia()
+    {
+        return $this->potencia;
+    }
+    public function setPotencia($potencia)
+    {
+        $this->potencia = $potencia;
+    }
+    public function getVelocitatMitjana()
+    {
+        return $this->velocitatMitjana;
+    }
+    public function setVelocitatMitjana($velocitatMitjana)
+    {
+        $this->velocitatMitjana = $velocitatMitjana;
+    }
+}

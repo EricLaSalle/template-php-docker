@@ -9,7 +9,6 @@
 
         // Recomendaciones para PHP
         "shevaua.phpcs",
-        "junstyle.php-cs-fixer",
         "bmewburn.vscode-intelephense-client"
     ],
     "unwantedRecommendations": []

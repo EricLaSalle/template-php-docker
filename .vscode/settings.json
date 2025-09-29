@@ -7,7 +7,7 @@
   },
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "[php]": {
-    "editor.defaultFormatter": "junstyle.php-cs-fixer"
+      "editor.defaultFormatter": "bmewburn.vscode-intelephense-client"
   },
   "editor.tabSize": 2,
   "editor.wordWrap": "on",
@@ -20,12 +20,12 @@
 
   // Configuraciones de PHP
   "php.validate.enable": true,
-  "php.validate.executablePath": "/usr/local/bin/php",
+  "php.validate.executablePath": "C:/Users/ericl/AppData/Roaming/Composer/vendor/bin/phpcs.bat",
 
   // Configuraciones para PHPCS (PHP CodeSniffer)
   "phpcs.enable": true,
   "phpcs.standard": "PSR12",
-  "phpcs.executablePath": "./vendor/bin/phpcs",
+  "phpcs.executablePath": "C:/Users/ericl/AppData/Roaming/Composer/vendor/bin/phpcs",
 
   // Configuraciones para Prettier
   "prettier.singleQuote": true,
