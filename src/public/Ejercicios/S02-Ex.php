@@ -118,9 +118,9 @@
     require_once 'Classes/Maritim.php';
 
     // Importar el namespace
-    use Classes\Vehicle;
-    use Classes\Terrestre;
-    use Classes\Maritim;
+    use Classes_S02Ex\Vehicle;
+    use Classes_S02Ex\Terrestre;
+    use Classes_S02Ex\Maritim;
 
     // Crear objecte Terrestre
     $cotxe = new Terrestre("1234-ABC", 150, 60, 4, false, true);

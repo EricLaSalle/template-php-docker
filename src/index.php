@@ -9,9 +9,10 @@
 </head>
 
 <body>
-    <?php echo "Hello World"; ?>
-    <p><a href="S01-Ex.php">S01-Ex.php</a></p>
-    <p><a href="S02-Ex.php">S02-Ex.php</a></p>
+    <?php echo "Exercicis PHP"; ?>
+    <p><a href="./public/Ejercicios/S01-Ex.php">S01-Ex.php</a></p>
+    <p><a href="./public/Ejercicios/S02-Ex.php">S02-Ex.php</a></p>
+    <p><a href="./public/Ejercicios/S03-Ex/S03-Ex.html">S03-Ex.php</a></p>
 </body>
 
 </html>

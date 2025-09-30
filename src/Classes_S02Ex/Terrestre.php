@@ -1,6 +1,6 @@
 <?php
 
-namespace Classes;
+namespace Classes_S02Ex;
 
 class Terrestre extends Vehicle
 {
