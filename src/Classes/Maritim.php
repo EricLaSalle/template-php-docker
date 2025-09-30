@@ -8,6 +8,15 @@ class Maritim extends Vehicle
     private $esloraFlotacio;
     private $numHelix;
 
+    //Constructor
+    public function __construct($matricula, $potencia, $velocitatMitjana, $esloraTotal, $esloraFlotacio, $numHelix)
+    {
+        parent::__construct($matricula, $potencia, $velocitatMitjana);
+        $this->esloraTotal = $esloraTotal;
+        $this->esloraFlotacio = $esloraFlotacio;
+        $this->numHelix = $numHelix;
+    }
+
     public function calcularPreu($esloraTotal, $potencia)
     {
         return 2500 * $esloraTotal * $potencia;

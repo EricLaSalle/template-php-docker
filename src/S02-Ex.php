@@ -123,22 +123,10 @@
     use Classes\Maritim;
 
     // Crear objecte Terrestre
-    $cotxe = new Terrestre();
-    $cotxe->setMatricula("1234-ABC");
-    $cotxe->setPotencia(150);
-    $cotxe->setVelocitatMitjana(60);
-    $cotxe->setNumRodes(4);
-    $cotxe->setCapacitatMaleter(false);
-    $cotxe->setRailsCarretera(true);
+    $cotxe = new Terrestre("1234-ABC", 150, 60, 4, false, true);
 
     // Crear objecte Maritim
-    $vaixell = new Maritim();
-    $vaixell->setMatricula("5678-DEF");
-    $vaixell->setPotencia(300);
-    $vaixell->setVelocitatMitjana(40);
-    $vaixell->setEsloraTotal(20);
-    $vaixell->setEsloraFlotacio(15);
-    $vaixell->setNumHelix(2);
+    $vaixell = new Maritim("5678-DEF", 300, 40, 20, 15, 2);
 
     // Mètode calcularTemps
     $distancia = 120;

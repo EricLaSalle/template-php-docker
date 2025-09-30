@@ -8,6 +8,14 @@ class Vehicle
     private $potencia;
     private $velocitatMitjana;
 
+    //Constructor
+    public function __construct($matricula, $potencia, $velocitatMitjana)
+    {
+        $this->matricula = $matricula;
+        $this->potencia = $potencia;
+        $this->velocitatMitjana = $velocitatMitjana;
+    }
+
     public function calcularTemps($distancia)
     {
         return $distancia / $this->velocitatMitjana;

@@ -8,6 +8,15 @@ class Terrestre extends Vehicle
     private $capacitatMaleter;
     private $railsCarretera;
 
+    //Constructor
+    public function __construct($matricula, $potencia, $velocitatMitjana, $numRodes, $capacitatMaleter, $railsCarretera)
+    {
+        parent::__construct($matricula, $potencia, $velocitatMitjana);
+        $this->numRodes = $numRodes;
+        $this->capacitatMaleter = $capacitatMaleter;
+        $this->railsCarretera = $railsCarretera;
+    }
+
     // Getters i Setters
     public function getNumRodes()
     {
