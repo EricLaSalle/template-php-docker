@@ -7,8 +7,8 @@ $usuari_correcte = "admin";
 $contrasenya_correcta = "1234";
 
 // Recibir datos del formulario
-$usuari = $_POST["usuari"] ?? "";
-$contrasenya = $_POST["contrasenya"] ?? "";
+$usuari = $_POST["usuari"];
+$contrasenya = $_POST["contrasenya"];
 
 // Validar campos
 if (empty($usuari) || empty($contrasenya)) {

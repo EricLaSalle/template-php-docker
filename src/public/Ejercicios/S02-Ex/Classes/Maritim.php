@@ -1,6 +1,6 @@
 <?php
 
-namespace Classes_S02Ex;
+namespace Classes;
 
 class Maritim extends Vehicle
 {

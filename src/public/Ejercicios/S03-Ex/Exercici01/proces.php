@@ -11,12 +11,14 @@ $dataNaixement = new DateTime($_POST["dataNaixement"]);
 //Validar que tots els camps estiguin plens
 if (empty($nom) || empty($cognom) || empty($correu) || empty($dataNaixement)) {
     echo "Tots els camps són obligatoris.";
+    echo "<a href='index.html'>Tornar al formulari</a>";
     exit;
 }
 
 //Validar que el correu electrònic tingui un format vàlid
 if (!filter_var($correu, FILTER_VALIDATE_EMAIL)) {
     echo "El correu electrònic no és vàlid.";
+    echo "<a href='index.html'>Tornar al formulari</a>";
     exit;
 }
 
@@ -25,6 +27,7 @@ $avui = new DateTime();
 $edat = $avui->diff($dataNaixement)->y;
 if ($edat < 18) {
     echo "Has de ser major d'edat.";
+    echo "<a href='index.html'>Tornar al formulari</a>";
     exit;
 }
 
@@ -35,3 +38,4 @@ echo "Cognom: $cognom<br>";
 echo "Correu electrònic: $correu<br>";
 echo "Data de naixement: " . $dataNaixement->format('d/m/Y') . "<br>";
 echo "Edat: $edat anys<br>";
+echo "<a href='index.html'>Tornar al formulari</a>";

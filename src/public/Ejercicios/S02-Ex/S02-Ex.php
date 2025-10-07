@@ -113,14 +113,14 @@
     <h2>Exercici 07</h2>
     <?php
     // Carregar les classes
-    require_once 'Classes/Vehicle.php';
-    require_once 'Classes/Terrestre.php';
-    require_once 'Classes/Maritim.php';
+    require_once "./Classes/Vehicle.php";
+    require_once "./Classes/Terrestre.php";
+    require_once "./Classes/Maritim.php";
 
     // Importar el namespace
-    use Classes_S02Ex\Vehicle;
-    use Classes_S02Ex\Terrestre;
-    use Classes_S02Ex\Maritim;
+    use Classes\Vehicle;
+    use Classes\Terrestre;
+    use Classes\Maritim;
 
     // Crear objecte Terrestre
     $cotxe = new Terrestre("1234-ABC", 150, 60, 4, false, true);
