@@ -13,6 +13,7 @@
     <p><a href="./public/Ejercicios/S01-Ex.php">S01-Ex.php</a></p>
     <p><a href="./public/Ejercicios/S02-Ex.php">S02-Ex.php</a></p>
     <p><a href="./public/Ejercicios/S03-Ex/S03-Ex.html">S03-Ex.php</a></p>
+    <p><a href="./public/Ejercicios/S05-Ex/index.html">S05-Ex.php</a></p>
 </body>
 
 </html>

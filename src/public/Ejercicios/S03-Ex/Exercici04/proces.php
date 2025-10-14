@@ -1,7 +1,6 @@
 <?php
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-
     // Verificamos que se haya subido un archivo
     if (!isset($_FILES['pujarFitxer']) || $_FILES['pujarFitxer']['error'] != 0) {
         echo "Error: No s'ha pujat cap fitxer o hi ha hagut un error en la pujada.<br>";
